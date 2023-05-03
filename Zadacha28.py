@@ -3,7 +3,7 @@
 # всех арифметических операций допускаются только +1 и -1.
 # Также нельзя использовать циклы.
 
-def sum_of_two_numbers_recursia(first_n, second_n)
+def sum_of_two_numbers_recursia(first_n, second_n):
     if first_n == 0:
         return second_n
     elif second_n == 0:
@@ -19,12 +19,9 @@ def sum_of_two_numbers_recursia(first_n, second_n)
 first_n = input("Введите первое число: ")
 second_n = input("Введите второе число: ")
 if first_n.isdigit() == False or second_n.isdigit() == False:
-    print("Вводите только числа!")
+    raise TypeError ("Вводите только неотрицательные числа!")
 else:
     first_n = int(first_n)
     second_n = int(second_n)
-    if first_n < 0 or second_n < 0:
-        print("Число должно быть неотрицательным.")
-    else:
-        our_sum = sum_of_two_numbers_recursia(first_n, second_n)
-        print(our_sum)
+    our_sum = sum_of_two_numbers_recursia(first_n, second_n)
+    print(our_sum)
